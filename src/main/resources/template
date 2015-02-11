@@ -1,0 +1,9 @@
+\<VirtualHost <server>.cloud.health-samurai.ru:<listen>>
+  RewriteEngine On
+  \<Location />
+    Order allow,deny
+    Allow from all
+    ProxyPass http://<ip>:60002/
+    ProxyPassReverse http://<ip>:<port>/
+  \</Location>
+\</VirtualHost>
